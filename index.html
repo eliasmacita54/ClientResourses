@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Resource Reservation</title>
+</head>
+<body>
+  <div id="login-form">
+    <h2>Entrar</h2>
+    <form onsubmit="return handleLogin()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <br>
+      <button type="submit">entar</button>
+    </form>
+  </div>
+
+  <div id="resource-list" style="display:none;">
+    <h2>Resources</h2>
+    <p id="user-name"></p> <!-- Element to display the user's name -->
+    <label for="resources-dropdown">Select a resource:</label>
+    <select id="resources-dropdown">
+      <option value="">--Select a resource--</option>
+    </select>
+    <select id="reserved-resources-dropdown">
+      <!-- Options will be populated dynamically by JavaScript -->
+    </select>
+    <button id="return-button" onclick="returnResource()">Devolver</button>
+    
+    <button id="reserve-button">Reservar</button>
+    <!-- <button id="return-button">Return Selected Resource</button> -->
+  </div>
+
+  <script src="./script/script.js"></script>
+</body>
+</html>
